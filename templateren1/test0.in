@@ -1,0 +1,16 @@
+3
+load_context student_context 8
+{
+  "student": {
+    "name": "Anton"
+  },
+  "course": {
+    "code": "DM1595"
+  }
+}
+load_template student_template 4
+Hej {{ put student.name }},
+Välkommen till den
+första laborationen
+i {{ put course.code }}.
+render student_template student_context

@@ -1,0 +1,19 @@
+3
+load_context nested_context 14
+{
+  "a": {
+    "b": {
+      "c": {
+        "d": "hello"
+      }
+    }
+  },
+  "e": {
+    "f": {
+      "g": "world"
+    }
+  }
+}
+load_template nested_template 1
+{{ put a.b.c.d }} {{ put e.f.g }}
+render nested_template nested_context
